@@ -1,0 +1,74 @@
+/**** GENERAL STYLES ****/
+html {
+  box-sizing:border-box;
+}
+*, *::before, *::after {
+  box-sizing:inherit;
+}
+body {
+  margin:0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  max-width: 1200px;
+}
+img {
+  max-width:100%;
+  height:auto;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+/**** MEMBERS SECTION ****/
+#members {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    flex: 25%;
+    border: 1px solid black;
+    margin: 2em;
+    height: 450px;
+}
+.card__container {
+    padding: 1.5em;
+    position: relative;
+}
+.card img{
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+}
+.card__crown {
+    float: right;
+}
+.card__name{
+    font-size: 20pt;
+    padding: 0.8em 0;
+}
+.card__bio {
+    text-align: left;
+    height: 90px;
+    overflow-x: hidden; 
+    overflow-y: auto; 
+}
+.card__roles {
+    text-align: left;
+    margin-top: 1.5em;
+}
+.role {
+    padding: 0.2em 1em;
+    margin-right: 1em;
+}
+/**** MEDIA QUERIES ****/
+@media screen and (max-width: 1050px) {
+    .card {
+        flex: 40%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .card {
+        flex-direction: column;
+    }
+}
